@@ -28,7 +28,7 @@ const MEMORY_4G: u64 = 0x1_0000_0000;
 const MEMORY_KERNEL: u64 = 0x40_0000_0000;
 const SIZE_1G: u64 = 0x40000000;
 const SIZE_2M: u64 = 0x200000;
-const SIZE_RAM: u64 = SIZE_1G * 24;
+const SIZE_RAM: u64 = SIZE_1G * 25;
 const RESERVED_MEMORY_SPACE_SIZE: u64 = 0x400_0000;
 
 pub struct Memory<'a> {
@@ -349,7 +349,7 @@ impl<'a> Memory<'a> {
 
         const ONE_GB: u64 = 1 << 30;
         const QUARK_START: u64 = 256 * ONE_GB;
-        const QUARK_SIZE: u64 = 24 * ONE_GB;
+        const QUARK_SIZE: u64 = 25 * ONE_GB;
         td::accept_quark_range(QUARK_START,QUARK_SIZE);
     }
 
